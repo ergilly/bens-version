@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'Game of Thrones';
+    src: url('./game-of-thrones/GameofThrones.eot');
+    src: url('./game-of-thrones/GameofThrones.eot?#iefix') format('embedded-opentype'),
+        url('./game-of-thrones/GameofThrones.woff') format('woff'),
+        url('./game-of-thrones/GameofThrones.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.font {
+    font-family: 'Game of Thrones';
+    font-weight: normal;
+    font-style: normal;
+}
+
+.guess-who-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  width: 100%;
+}
+
+#option-form {
+  width: 50%;
+}
+
+.pics-view {
+  max-width: 100%;
+  margin: 40px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-rows: auto;
+}
+
+#pic-card {
+  border-radius: 10px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.pic-item {
+
+}
+
+.pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.card-back {
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+}
+
+.flip-card {
+  width: 200px;
+  height: 200px;
+  perspective: 600px;
+}
+
+.flip-card-inner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  border: 1px solid rgb(217, 217, 217);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: rotateY( 0deg );
+}
+
+.flip-card-back {
+  transform: rotateY( 180deg );
+}
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.answer-text {
+  margin: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
